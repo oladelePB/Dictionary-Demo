@@ -1,10 +1,10 @@
 import React from "react";
 import { TextField } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { debounceSearch } from "../../utilities/utilities";
+// import { debounceSearch } from "../../utilities/utilities";
 
 import "./Header.css";
-import { useCallback } from "react";
+// import { useCallback } from "react";
 
 const Header = ({ word, setWord }) => {
   const darkTheme = createTheme({
@@ -16,14 +16,14 @@ const Header = ({ word, setWord }) => {
     },
   });
 
-  const handleChange = (e) => {
-    setWord(e.target.value);
-  };
+  // const handleChange = (e) => {
+  //   setWord(e.target.value);
+  // };
 
-  const optimizedSearchInput = useCallback(
-    debounceSearch(handleChange, 2000),
-    []
-  );
+  // const optimizedSearchInput = useCallback(
+  //   debounceSearch(handleChange, 2000),
+  //   []
+  // );
 
   return (
     <div className="header">
@@ -31,23 +31,23 @@ const Header = ({ word, setWord }) => {
       <div className="input">
         <ThemeProvider theme={darkTheme}>
           {/* Without debounce */}
-          {/* <TextField
+          <TextField
             id="standard-basic"
             value={word}
             onChange={(e) => setWord(e.target.value)}
             label="Search a word"
             className="search"
             variant="standard"
-          /> */}
+          />
 
           {/* with debounce */}
-          <TextField
+          {/* <TextField
             id="standard-basic"
             onChange={optimizedSearchInput}
             label="Search a word"
             className="search"
             variant="standard"
-          />
+          /> */}
         </ThemeProvider>
       </div>
     </div>
