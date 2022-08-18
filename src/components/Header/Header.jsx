@@ -27,7 +27,7 @@ const Header = ({ word, setWord }) => {
 
   return (
     <div className="header">
-      <span className="title">{word ? word : "Word Hunt"}</span>
+      <span className="title">{word ? word : "Dictionary search"}</span>
       <div className="input">
         <ThemeProvider theme={darkTheme}>
           {/* Without debounce */}
