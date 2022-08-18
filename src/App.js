@@ -1,9 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useEffect, useState } from "react";
 import { dictionaryAPi } from "./utilities/utilities";
 import Header from "./components/Header/Header";
-import { Container, CircularProgress } from "@mui/material";
+import { Container } from "@mui/material";
 import Definition from "./components/Definition/Definition";
 
 function App() {
